@@ -1,0 +1,199 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+  #root {
+    max-width: 1200px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 10px 25px;
+    margin: 0 auto;
+    background-image: url(../public/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    scroll-behavior: smooth;
+
+    .App {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.205);
+
+      .App-wrapper{
+        width: 100%;
+        height: 100vh;
+      }
+    }
+
+    main {
+      padding: 1% ;
+      color: rgb(36, 36, 36);
+    }
+
+
+
+  
+    Nav {
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      background: radial-gradient(
+        circle at 10% 20%,
+        rgba(0, 52, 89, 0.863) 0%,
+        rgb(1, 148, 206) 90% );
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      font-size: 1rem;
+      padding-right: 4rem;
+      transition: .5s ease-in-out;
+
+      &:hover {
+        color: #fdb44b;
+      }
+    }
+
+    .date-info {
+      font-size: 3rem;
+      text-shadow: 1px 1px 1.5px rgb(19, 86, 148);
+    }
+
+  
+    .weather {
+      padding-top: 2vh;
+      .temperature {
+        font-size: 9rem;
+        line-height: 10rem;
+        text-shadow: 3px 3px 4.5px rgb(19, 86, 148);
+        color: rgb(33, 33, 33);
+      }
+
+      .iconList {
+        max-width: 100%;
+        display: flex;
+        div {
+          margin: 2vw 0 7vw 2vw;
+        }
+      }
+    }
+  }
+}
+
+
+.inputButton {
+  margin: 3vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  text-shadow: 0.5px 0.5px 0.75px rgb(15, 86, 153);
+}
+
+.inputButton button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  background: #1c5174c2;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  color: white;
+  transition: .5s ease-in-out;
+
+}
+
+////////// Front page style start 
+
+.loginButton{
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  background: #1c5174c2;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  color: white;
+  transition: .5s ease-in-out;
+
+}
+
+button:hover {
+  color: #fdb44b;
+}
+
+.nav-logo{
+  width: 100px;
+}
+
+.front-page-logo{
+  width: 400px;
+}
+
+.front-page-title{
+  color: #414141;
+  margin: 3vh 0 3vh 0;
+}
+
+// Clouds animation
+
+.cloudPNG img {
+  width: 350px;
+  opacity: 0.9;
+  position: fixed;
+  top: 28vh;
+  animation: cloudMove;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  overflow: hidden;
+}
+
+.forecast{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.LinearChartWeather{
+width: 768px;
+height: 300px;
+}
+
+
+
+@keyframes cloudMove {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) { 
+    
+  .front-page-logo{
+    width: 80vw;
+  }
+
+
+  .LinearChartWeather{
+    width: 360px;
+    height: 200px;
+    margin-left: -5vw;
+  }
+  
+}
+
